@@ -1,23 +1,19 @@
-const input = document.querySelector("#favchap");
-const button = document.querySelector('button')
-const list = document.querySelector('#list')
-
-
+const input = document.querySelector('#favchap');
+const button = document.querySelector('button');
+const list = document.querySelector('#list');
 
 
 button.addEventListener('click', function(){
-
     const li = document.createElement('li');
     const deleteButton = document.createElement('button');
 
-    if (input.value.trim() !== '') {
+    if (input.value.trim() !== "") {
         li.textContent = input.value;
-        deleteButton.textContent = '❌';
+        deleteButton.textContent = "❌";
         li.append(deleteButton);
         list.append(li);
-        
     } else {
-        alert('Please enter a valid chapter name');
+        alert("Please enter a favorite chapter");
         input.focus();
     }
 
@@ -25,12 +21,7 @@ button.addEventListener('click', function(){
         list.removeChild(li);
         input.focus();
     });
-
-    input.value = "";
-    input.focus();
-
-});
-
-buttton.addEventListener('click',function(){
     
+    input.value = '';
+    input.focus();
 });
